@@ -3,14 +3,12 @@
     <a class="item">
       Home
     </a>
-    <a class="item">
-      Chat Room
-    </a>
-    <div class="right menu ">
+    <%= link_to 'Chat Room', root_path, class:'item' %>
+    <div class="right menu">
       <div class="ui dropdown item">
         Account <i class="dropdown icon"></i>
         <div class="menu">
-          <a class="item">Log in</a>
+          <%= link_to 'Log in', login_path, class:'item' %>
           <a class="item">Log out</a>
         </div>
       </div>

@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
+gem 'bcrypt', '~> 3.1.7'
+gem 'hirb'
+
 gem 'jquery-rails'
 #Use semantic-UI for styling
 gem 'semantic-ui-sass'
