@@ -20,4 +20,8 @@
 
 $( document ).on('turbolinks:load', function() {
   $('.ui.dropdown').dropdown();
+  $(".success" ).fadeOut(1000);
+  $('.message.error .close').on('click', function() {
+    $(this).closest('.message').transition('fade');
+  });
 });
