@@ -1,8 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  config.web_socket_server_url = "wss://message-me-fred.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://message-me-fred.herokuapp.com', 'https://message-me-fred.herokuapp.com'] 
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -47,6 +45,10 @@ Rails.application.configure do
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
+
+  # https://blog.heroku.com/real_time_rails_implementing_websockets_in_rails_5_with_action_cable
+  config.web_socket_server_url = "wss://message-me-fred.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://message-me-fred.herokuapp.com', 'https://message-me-fred.herokuapp.com']
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
