@@ -9,20 +9,20 @@
   <!-- Chat Room -->
   <div class="twelve wide column">
     <div class="ui card fluid raised chatBox">
-      <div class="content">
-        <div class="ui small feed">
+      <div class="content" id="content-container">
+        <div class="ui small feed" id="message-container">
           <h4 class="ui header">Chat Room</h4>
           <%= render @messages%>
         </div>
       </div>
 
       <div class="extra content">
-        <form class="ui reply form">
+        <%= form_for(@message, html: {class:"ui reply form", role: "form", remote: true}, url: message_path) do |f| %>
           <div class="ui action input fluid">
-            <input type="text" placeholder="Enter your message here">
-            <button class="ui button orange">Send</button>
+            <%= f.text_field :body, placeholder: "Enter your message here"%>
+            <%= f.button 'Send', class: "ui button orange"%>
           </div>
-        </form>
+        <% end %>
       </div>
     </div>
   </div>
